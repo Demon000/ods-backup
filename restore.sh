@@ -4,6 +4,7 @@ source "vars.sh"
 
 mkdir -p "$ODDSOLUTIONS_US_HTML"
 mkdir -p "$ODS_NINJA_HTML"
+mkdir -p "$ODS_NINJA_BUILD_SERVER"
 
 # Nginx
 cp "$LOCAL_NGINX/oddsolutions.us" "$NGINX_SITES_AVAILABLE/oddsolutions.us"
@@ -68,3 +69,8 @@ pushd "$ODS_NINJA_WEBSSH"
 npm install
 npm run link
 popd
+
+# H5AI
+wget https://github.com/lrsjng/h5ai/releases/download/v0.30.0/h5ai-0.30.0.zip
+unzip h5ai-0.30.0.zip -d "$ODS_NINJA_H5AI"
+cp "$LOCAL_H5AI/styles.css" "$ODS_NINJA_H5AI/public/css"

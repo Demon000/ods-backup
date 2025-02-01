@@ -24,3 +24,7 @@ cp "$BUILDS_PUBLISHER_PATH/prod_config.json" "$LOCAL_BUILDS_PUBLISHER"
 # Webssh
 mkdir -p "$LOCAL_WEBSSH"
 cp "$ODS_NINJA_WEBSSH/config.js" "$LOCAL_WEBSSH"
+
+# H5AI
+mkdir -p "$LOCAL_H5AI"
+cp "$ODS_NINJA_H5AI/public/css/styles.css" "$LOCAL_H5AI"
